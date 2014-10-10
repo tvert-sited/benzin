@@ -29,6 +29,7 @@ class Films extends CActiveRecord
 	{
 		// NOTEE: you should only define rules for those attributes that
 		// will receive user inputs.
+        // опять оно
 		return array(
 			array('code, title, did', 'required'),
 			array('did', 'numerical', 'integerOnly'=>true),

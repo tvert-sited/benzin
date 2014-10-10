@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a83aa752-b8e5-49d1-a71c-18b3caaa6c53" name="Default" comment="Пробую комитить">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Book.php" afterPath="$PROJECT_DIR$/protected/models/Book.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+    <list default="true" id="a83aa752-b8e5-49d1-a71c-18b3caaa6c53" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme3.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Films.php" afterPath="$PROJECT_DIR$/protected/models/Films.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="benzin.iws" />
@@ -40,9 +41,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/index-test.php" />
-        <option value="$PROJECT_DIR$/protected/models/Films.php" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/protected/models/Book.php" />
+        <option value="$PROJECT_DIR$/readme2.txt" />
+        <option value="$PROJECT_DIR$/readme3.txt" />
+        <option value="$PROJECT_DIR$/protected/models/Films.php" />
       </list>
     </option>
   </component>
@@ -225,7 +228,11 @@
       <created>1412927493971</created>
       <updated>1412927493971</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Пробую комитить">
+      <created>1412927541474</created>
+      <updated>1412927541474</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -267,9 +274,9 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Пробую комитить" />
     <MESSAGE value="пытаюсь комитить и на сервер заливать" />
-    <option name="LAST_COMMIT_MESSAGE" value="пытаюсь комитить и на сервер заливать" />
+    <MESSAGE value="Пробую комитить" />
+    <option name="LAST_COMMIT_MESSAGE" value="Пробую комитить" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -294,15 +301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Films.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="31" selection-start="446" selection-end="446" vertical-scroll-proportion="0.55119455" vertical-offset="0" max-vertical-offset="2176">
-          <folding>
-            <element signature="e#7#286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index-test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="0.43515357" vertical-offset="0" max-vertical-offset="586">
@@ -323,6 +321,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="3" selection-start="19" selection-end="19" vertical-scroll-proportion="0.055555556" vertical-offset="0" max-vertical-offset="612">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Films.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="20" selection-start="685" selection-end="685" vertical-scroll-proportion="0.34812286" vertical-offset="323" max-vertical-offset="2193">
+          <folding>
+            <element signature="e#7#286#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -12,6 +12,8 @@
  * @property string $link
  * @property string $img
  */
+
+// камент для проверки комита и выгрузки
 class Book extends CActiveRecord
 {
 	/**

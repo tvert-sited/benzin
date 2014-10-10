@@ -11,6 +11,7 @@
  * @property string $kind
  * @property string $len
  */
+// Тупой коментарий для комита
 class Films extends CActiveRecord
 {
 	/**

@@ -119,3 +119,4 @@ class Films extends CActiveRecord
 		return parent::model($className);
 	}
 }
+// Вот кусочек для тестирования гитхаба

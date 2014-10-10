@@ -5,6 +5,7 @@
  */
 
 // change the following paths if necessary
+// пытаюсь комитить
 $yii=dirname(__FILE__).'/../yii/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/test.php';
 

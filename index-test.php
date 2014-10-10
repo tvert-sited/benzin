@@ -6,7 +6,7 @@
 
 // change the following paths if necessary
 // пытаюсь комитить
-// и снова комичу
+// и снова комич у
 
 $yii=dirname(__FILE__).'/../yii/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/test.php';

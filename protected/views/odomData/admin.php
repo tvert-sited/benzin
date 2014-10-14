@@ -2,14 +2,14 @@
 /* @var $this OdomDataController */
 /* @var $model OdomData */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Odom Datas'=>array('index'),
 	'Manage',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'List OdomData', 'url'=>array('index')),
-	array('label'=>'Create OdomData', 'url'=>array('create')),
+	array('label'=>'Список записей', 'url'=>array('index')),
+	array('label'=>'Создать запись', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,14 +26,14 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Odom Datas</h1>
+<h1>Управление записями показаний одометров.</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+Вы можете управлять поиском с помощью операторов сравнения (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>) подставляя их в поисковые поля вместе с сравниваемыми значениями.
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Расширенный поиск','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -45,12 +45,15 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+//		'id',
 		'odo_begin',
 		'odo_end',
 		'auto',
-		'date_cre',
-		'date_mod',
+//		'data_ins',
+//		'data_upd',
+//		'arch',
+		'data_vvod',
+//		'data_del',
 		array(
 			'class'=>'CButtonColumn',
 		),

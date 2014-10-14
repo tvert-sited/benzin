@@ -21,13 +21,16 @@
 	<?php echo CHtml::encode($data->auto); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_cre')); ?>:</b>
-	<?php echo CHtml::encode($data->date_cre); ?>
+
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('data_vvod')); ?>:</b>
+	<?php echo CHtml::encode($data->data_vvod); ?>
+	<br />
+    <?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('data_del')); ?>:</b>
+	<?php echo CHtml::encode($data->data_del); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_mod')); ?>:</b>
-	<?php echo CHtml::encode($data->date_mod); ?>
-	<br />
-
+	*/ ?>
 
 </div>

@@ -1,20 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "auto".
+ * This is the model class for table "log".
  *
- * The followings are the available columns in table 'auto':
+ * The followings are the available columns in table 'log':
  * @property integer $id
+ * @property string $date
  * @property string $text
+ * @property string $author
  */
-class Auto extends CActiveRecord
+class Log extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'auto';
+		return 'log';
 	}
 
 	/**
@@ -25,12 +27,12 @@ class Auto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id,text', 'required'),
-			array('id', 'numerical', 'integerOnly'=>true),
-			array('text', 'length', 'max'=>50),
+			array('text', 'length', 'max'=>500),
+			array('author', 'length', 'max'=>50),
+			array('date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, text', 'safe', 'on'=>'search'),
+			array('id, date, text, author', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,8 +53,10 @@ class Auto extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'Код объекта',
-			'text' => 'Наименование',
+			'id' => 'ID',
+			'date' => 'Date',
+			'text' => 'Text',
+			'author' => 'Author',
 		);
 	}
 
@@ -75,7 +79,9 @@ class Auto extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('date',$this->date,true);
 		$criteria->compare('text',$this->text,true);
+		$criteria->compare('author',$this->author,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -86,7 +92,7 @@ class Auto extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Auto the static model class
+	 * @return Log the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

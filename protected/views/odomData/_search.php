@@ -11,10 +11,7 @@
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-	</div>
+
 
 	<div class="row">
 		<?php echo $form->label($model,'odo_begin'); ?>
@@ -31,18 +28,15 @@
 		<?php echo $form->textField($model,'auto'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'date_cre'); ?>
-		<?php echo $form->textField($model,'date_cre'); ?>
-	</div>
+
 
 	<div class="row">
-		<?php echo $form->label($model,'date_mod'); ?>
-		<?php echo $form->textField($model,'date_mod'); ?>
+		<?php echo $form->label($model,'data_vvod'); ?>
+		<?php echo $form->textField($model,'data_vvod'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Искать!'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

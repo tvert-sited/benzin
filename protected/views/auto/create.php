@@ -2,17 +2,17 @@
 /* @var $this AutoController */
 /* @var $model Auto */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Autos'=>array('index'),
 	'Create',
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'List Auto', 'url'=>array('index')),
-	array('label'=>'Manage Auto', 'url'=>array('admin')),
+	array('label'=>'Перечень техники', 'url'=>array('index')),
+	array('label'=>'Управление списком', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Auto</h1>
+<h1>Создать новый объект учета.</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -15,62 +15,78 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p>Все поля должны быть заполнены.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-		<?php echo $form->error($model,'id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'odo_begin'); ?>
+		<?php
+//        echo $form->labelEx($model,'odo_begin');
+        echo $form->label($model,'odo_begin');
+        ?>
 		<?php echo $form->textField($model,'odo_begin'); ?>
 		<?php echo $form->error($model,'odo_begin'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'odo_end'); ?>
+		<?php
+//        echo $form->labelEx($model,'odo_end');
+        echo $form->label($model,'odo_end');
+        ?>
 		<?php echo $form->textField($model,'odo_end'); ?>
 		<?php echo $form->error($model,'odo_end'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'auto'); ?>
+		<?php
+//        echo $form->labelEx($model,'auto');
+        echo $form->label($model,'auto');
+        ?>
 
         <?php
-
-
         $list=CHtml::listData(Auto::model()->findAll(array('order' => 'id')), 'id', 'text');
-
         echo $form->dropDownList($model,'auto',$list, array('prompt' => 'Выберите транспорт'));
-//        echo $form->dropDownList($model, 'region_id', CHtml::listData(Region::model()->findAll(), 'id', 'name'), array('prompt' => 'Выберите регион'));
-
-        ?>
-
-        		<?php
-        //echo $form->textField($model,'auto');
-        ?>
-
+        //echo $form->textField($model,'auto'); ?>
 		<?php echo $form->error($model,'auto'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'date_cre'); ?>
-		<?php echo $form->textField($model,'date_cre'); ?>
-		<?php echo $form->error($model,'date_cre'); ?>
-	</div>
+
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date_mod'); ?>
-		<?php echo $form->textField($model,'date_mod'); ?>
-		<?php echo $form->error($model,'date_mod'); ?>
+		<?php
+//        echo $form->labelEx($model,'data_vvod');
+        echo $form->label($model,'data_vvod');
+        ?>
+
+        <?php
+
+        $this->widget('zii.widgets.jui.CJuiDatePicker',
+        // 'name'=>'birthdate',
+            array(
+                'model'=>$model,
+                'value'=>$model->data_vvod,
+                'attribute'=>'data_vvod',
+                //        'name'=>"Guest[created]", // the name of the field
+                // pre-fill the value
+                // additional javascript options for the date picker plugin
+                'options'=>array(
+                        'showAnim'=>'fold',
+                        'dateFormat'=>'yy-mm-dd',  // optional Date formatting
+                        'debug'=>true,),
+                'htmlOptions'=>array(
+                        'style'=>'height:20px;'
+            )));
+
+		// echo $form->textField($model,'data_vvod');
+        ?>
+
+
+
+		<?php echo $form->error($model,'data_vvod'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Заполнить' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

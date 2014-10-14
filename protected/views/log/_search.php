@@ -1,6 +1,6 @@
 <?php
-/* @var $this AutoController */
-/* @var $model Auto */
+/* @var $this LogController */
+/* @var $model Log */
 /* @var $form CActiveForm */
 ?>
 
@@ -17,12 +17,22 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'date'); ?>
+		<?php echo $form->textField($model,'date'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'text'); ?>
-		<?php echo $form->textField($model,'text',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'text',array('size'=>60,'maxlength'=>500)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'author'); ?>
+		<?php echo $form->textField($model,'author',array('size'=>50,'maxlength'=>50)); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Искать!'); ?>
+		<?php echo CHtml::submitButton('Search'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

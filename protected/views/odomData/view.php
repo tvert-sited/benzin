@@ -25,7 +25,10 @@ $this->menu=array(
 		'odo_begin',
 		'odo_end',
 		'auto',
-		'date_cre',
-		'date_mod',
+//		'data_ins',
+//		'data_upd',
+//		'arch',
+		'data_vvod',
+//		'data_del',
 	),
 )); ?>

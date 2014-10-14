@@ -8,8 +8,11 @@
  * @property string $odo_begin
  * @property string $odo_end
  * @property integer $auto
- * @property string $date_cre
- * @property string $date_mod
+ //* @property string $data_ins
+ * @property string $data_upd
+ * @property integer $arch
+ * @property string $data_vvod
+ //* @property string $data_del
  */
 class OdomData extends CActiveRecord
 {
@@ -29,15 +32,12 @@ class OdomData extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, auto, odo_begin, odo_end', 'required'),
-			array('id, auto', 'numerical', 'integerOnly'=>true),
-            array('odo_begin, odo_end, date_cre, date_mod', 'safe'),
-			array('date_cre','date'),
-            array('date_mod','date'),
-
+			array('auto', 'numerical', 'integerOnly'=>true),
+            array('odo_begin, odo_end, auto, data_vvod','required'),
+			array('odo_begin, odo_end, data_vvod', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, odo_begin, odo_end, auto, date_cre, date_mod', 'safe', 'on'=>'search'),
+			array('id, odo_begin, odo_end, auto, data_vvod', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,14 +58,15 @@ class OdomData extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			// id, date_cre, date_mod надо делать чтобы сами заполнялись
-            // id от сиквенса, даты оттекущей даты вставки и редактирования
-            'id' => 'ID',
-			'odo_begin' => 'Начальное показание ',
-			'odo_end' => 'Конечное показание',
-			'auto' => 'Авто',
-			'date_cre' => 'Дата создания',
-			'date_mod' => 'Дата модификации',
+			'id' => 'ID',
+			'odo_begin' => 'Начальные показания ',
+			'odo_end' => 'Конечные показания',
+			'auto' => 'Объект учета',
+//			'data_ins' => 'Data Ins',
+//			'data_upd' => 'Data Upd',
+//			'arch' => 'Arch',
+			'data_vvod' => 'Дата учета',
+//			'data_del' => 'Data Del',
 		);
 	}
 
@@ -91,8 +92,11 @@ class OdomData extends CActiveRecord
 		$criteria->compare('odo_begin',$this->odo_begin,true);
 		$criteria->compare('odo_end',$this->odo_end,true);
 		$criteria->compare('auto',$this->auto);
-		$criteria->compare('date_cre',$this->date_cre,true);
-		$criteria->compare('date_mod',$this->date_mod,true);
+//		$criteria->compare('data_ins',$this->data_ins,true);
+//		$criteria->compare('data_upd',$this->data_upd,true);
+//		$criteria->compare('arch',$this->arch);
+//		$criteria->compare('data_vvod',$this->data_vvod,true);
+//		$criteria->compare('data_del',$this->data_del,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

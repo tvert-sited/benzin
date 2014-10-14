@@ -17,8 +17,13 @@
 	<?php echo CHtml::encode($data->odo_end); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('auto')); ?>:</b>
-	<?php echo CHtml::encode($data->auto); ?>
+
+
+    <b><?php echo CHtml::encode($data->getAttributeLabel('auto')); ?>:</b>
+	<?php
+//    echo CHtml::encode($data->auto);
+    echo CHtml::encode($data->auto_type->text);
+    ?>
 	<br />
 
 

@@ -2,21 +2,21 @@
 /* @var $this OdomDataController */
 /* @var $model OdomData */
 
-$this->breadcrumbs=array(
+/*$this->breadcrumbs=array(
 	'Odom Datas'=>array('index'),
 	$model->id,
-);
+);*/
 
 $this->menu=array(
-	array('label'=>'List OdomData', 'url'=>array('index')),
-	array('label'=>'Create OdomData', 'url'=>array('create')),
-	array('label'=>'Update OdomData', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete OdomData', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage OdomData', 'url'=>array('admin')),
+	array('label'=>'Список записей', 'url'=>array('index')),
+	array('label'=>'Создать запись', 'url'=>array('create')),
+	array('label'=>'Обновить запись', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Удалить запись', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Вы действительно хотите удалить эту запись?')),
+	array('label'=>'Управлять записями', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View OdomData #<?php echo $model->id; ?></h1>
+<h1>Просмотр записи #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

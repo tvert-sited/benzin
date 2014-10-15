@@ -9,7 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Приложение по Учету ГСМ',
     'language'=>'ru',
-   // 'theme'=>'hachimaki',
+    'theme'=>'hachimaki',
 	// preloading 'log' component
 	'preload'=>array('log'),
 

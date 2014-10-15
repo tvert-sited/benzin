@@ -28,9 +28,10 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Ввод пробега', 'url'=>array('/odomData/create')),
+				array('label'=>'Просмотр пробега', 'url'=>array('/odomData/admin', 'view'=>'about')),
+				array('label'=>'Авто админ', 'url'=>array('/Auto/admin')),
+                array('label'=>'Логирование', 'url'=>array('/Log/admin')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
